@@ -32,6 +32,7 @@ before_script:
    - sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/ciao/ciao-controller-key.pem -out /etc/pki/ciao/ciao-controller-cacert.pem -subj '/CN=localhost/O=CIAO test server/C=US'
    - sudo cp /etc/pki/ciao/ciao-controller-cacert.pem /usr/local/share/ca-certificates/ciao-controller-cacert.crt
    - sudo update-ca-certificates
+   - ls /dev
 
 script:
    - go env
